@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #1e1e1e;
+    padding: 1rem 4rem;
+    max-width: 100%;
+    position: relative;
+  }
+  
+  .logo {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: absolute;
+    left: 4rem;
+  }
+  
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    .nav-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 10rem;
+  
+      .nav-item {
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-weight: 900;
+          font-size: 1.25rem;
+          transition: color 0.3s;
+          cursor: pointer;
+  
+          &:hover {
+            color: #f0a500;
+          }
+        }
+      }
+    }
+  }
+  
