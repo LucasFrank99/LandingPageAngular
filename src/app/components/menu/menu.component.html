@@ -1,1 +1,20 @@
-<p>menu works!</p>
+<section class="menu">
+    <h1 class="menu-title">Our Menu</h1>
+    <div class="carousel-container">
+        <button class="carousel-button prev" (click)="prevSlide()">❮</button>
+        <div class="carousel">
+            <div class="carousel-inner" [style.transform]="'translateX(-' + (currentSlide * (100 / itemsPerSlide)) + '%)'">
+                <div class="carousel-item" *ngFor="let item of menuItems">
+                    <div class="card">
+                        <img [src]="item.image" [alt]="item.title">
+                        <div class="card-content">
+                            <h3>{{item.title}}</h3>
+                            <p>{{item.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-button next" (click)="nextSlide()">❯</button>
+    </div>
+</section>

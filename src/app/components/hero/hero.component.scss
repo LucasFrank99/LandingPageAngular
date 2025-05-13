@@ -33,10 +33,10 @@
         position: absolute;
         left: 10%;
         top: 50%;
-        color: white;
+        color: #ff9100;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
         z-index: 1;
         max-width: 500px;
-        opacity: 0;
         animation: fadeInContent 1.5s ease-in-out 0.5s forwards;
 
         @keyframes fadeInContent {
@@ -60,6 +60,69 @@
         p {
             font-size: 1.5rem;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        .hero-img {
+            height: 800px;
+        }
+
+        .hero-content {
+            left: 5%;
+            max-width: 400px;
+
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            p {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        .hero-img {
+            height: 600px;
+        }
+
+        .hero-content {
+            left: 15%;
+            text-align: center;
+            width: 90%;
+
+            h1 {
+                font-size: 3rem;
+                text-align: center;
+            }
+
+            p {
+                font-size: 1.2rem;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        .hero-img {
+            height: 500px;
+        }
+
+        .hero-content {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
         }
     }
 }

@@ -1,13 +1,16 @@
-
 <header class="header">
     <h1 class="logo">Frankines</h1>
-    <nav class="navbar">
-      <ul class="nav-list">
-        <li class="nav-item"><a routerLink="/">Início</a></li>
-        <li class="nav-item"><a routerLink="/sobre">Sobre</a></li>
-        <li class="nav-item"><a routerLink="/servicos">Serviços</a></li>
-        <li class="nav-item"><a routerLink="/contato">Contato</a></li>
-      </ul>
+    <button class="menu-button" (click)="toggleMenu()" [class.active]="isMenuOpen">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav class="navbar" [class.active]="isMenuOpen">
+        <ul class="nav-list">
+            <li class="nav-item"><a (click)="scrollToElement('about'); isMenuOpen = false">Best Sellers</a></li>
+            <li class="nav-item"><a (click)="scrollToElement('menu'); isMenuOpen = false">Menu</a></li>
+            <li class="nav-item"><a (click)="scrollToElement('contact'); isMenuOpen = false">Contact</a></li>
+        </ul>
     </nav>
 </header> 
 
